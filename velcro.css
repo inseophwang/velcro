@@ -5,12 +5,19 @@
 
 /* You'll need to implement this one */
 .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 
 /* And this one. */
 .row {
-
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
 }
 
 /*
@@ -32,6 +39,46 @@ And these classes:
 * col-sm-12
 
 ### md
-* col-md-3
+.col-md-3
 
 */
+@media (max-width: 768px){
+    .container{
+        max-width: 768px;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+    .col-sm-2, .col-sm-10{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    .col-sm-4, .col-sm-8{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@media (max-width: 576px){
+    .container{
+        max-width: 576px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .col-2, .col-4, .col-8, .col-10, .col-12{
+        display: flex;
+        flex-wrap: wrap;
+        
+    } */
+}
